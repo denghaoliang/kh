@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/ftds.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		<script>
+			$(function(){
+              var se1=$(".se1-con h1")				
+              var se2=$(".se1-con p")
+              var se3=$(".se2-con h1")				
+              var se4=$(".se2-con p")
+              var se5=$(".se2-con")
+                $(window).scroll(function(){
+                	if($(this).scrollTop()>800){
+                		se1.animate({opacity:1,marginTop:"40px"},1000)
+                		se2.animate({opacity:1},2000)
+                		
+                	}
+                	if($(this).scrollTop()>1600){
+                		se3.animate({opacity:1},1000)
+                		se4.animate({opacity:1},2000)
+                		se5.animate({top:270},1500)
+                	}
+                	
+                })
+//               滚动条事件结束
+				var par=$(".box-tu ul")
+				var tu=$(".box-tu li ")
+                var dian=$(".box-dian")
+                var dians=$(".box-dian li")
+//                事件委派
+                dian.on("click","li",function(){
+//              	保留索引值
+                	var index=$(this).index()
+//              	点击后让所有li隐藏
+                	tu.css("display","none")
+//              	点击的当前索引值对应的里淡入
+                	tu.eq(index).fadeIn(1300)
+					//让点击的li添加样式on的时候，让他的兄弟都移除on的样式
+                	$(this).addClass("on").siblings().removeClass("on")
+                })
+                
+                var i=0
+				var timer=null
+				//定时器自带每隔一段时间执行一次函数，不用调用函数来执行
+				timer=setInterval(change,2000);
+				function change(){
+					i++
+					if(i>4){i=0}
+					//获取li的宽度
+					var tuWith=tu.width()
+				
+					//定时器每隔2秒执行一次函数，函数里的动画每走一次left花费一秒
+					par.animate({left:-tuWith*i},1000)
+					//改变轮播图下面的颜色跟随
+					dians.eq(i).addClass("on").siblings().removeClass("on")
+				
+				}
+				//当鼠标移动到轮播图下面时，清理定时器
+				dian.mouseenter(function(){
+					clearInterval(timer);
+					//清除定时器的时候轮播图回到原位
+					par.animate({left:0},500);
+					//跟随色也回到原位
+					dians.eq(0).addClass("on").siblings().removeClass("on")
+				  
+				    
+				})
+                
+                
+                
+				
+			})
+		</script>
+	</head>
+	<body>
+		
+			<header>
+			<div class="yemei">
+				<div class="hr-a">
+					<div>
+					<a href="##">登陆</a>
+					<a href="##">注册</a>
+					<a href="##">个人中心</a>
+					<a href="##">合作渠道</a>
+					<a href="##">帮主中心</a>
+					<a href="##">手机版</a>
+					</div>
+					
+				</div>	
+			</div>
+			<!--页眉结束-->
+			<nav>
+				<div></div>
+				<div class="sos">
+					<input type="text" />
+					<input type="button" value="搜索" />
+				</div>
+				<div class="gwc">
+					<a href="##">
+					<span></span>
+					<span>购物车</span>
+					</a>
+				</div>
+				
+			</nav>
+			<!--导航栏结束-->
+			<div class="banner">
+					<ul class="top">
+						<li><a href="index.html">乐视电视</a></li>
+						<li>乐视会员</li>
+						<li>以旧换新</li>
+						<li>乐迷社区</li>
+						<li>超级电视</li>
+					</ul>
+				<div class="gm">
+					<div class="gm-com">
+					<p>超4X40M</p>
+					<ul class="uptabSwitch">
+						<li><a href="gmai.html">概览</a><span>|</span> </li>
+						<li><a href="gmai.html">EUI6.0</a><span>|</span> </li>
+						<li><a href="gmai.html">内容</a><span>|</span> </li>
+						<li><a href="gmai.html">游戏应用</a><span>|</span> </li>
+						<li><a href="gmai.html">参数</a><span>|</span> </li>
+						<li><a href="gmai.html">延保服务</a> </li>
+						<li><a href="gmai.html">立即购买</a></li>
+					</ul>
+				</div>	
+				
+				<div class="b1">
+					<div class="b1-contemt">
+						<h1>第4代超级电视 X40M</h1>
+						<p>体价比主宰者</p>
+						<div class="yj">原套餐价：￥2,449 </div>
+						<div class="hdj">
+							<span>活动价：￥</span> <span>2,099</span> <span></span>
+						</div>
+						<a href="gmai.html">了解会员机购买方案 ></a>
+						<a href="gmai.html">十一狂欢high翻天，最高直降400元 >>></a>
+						         
+					</div>
+				</div>
+				<div class="b2"></div>
+				</div>	
+			</div>
+			</header>
+			
+			<section class="jsxc">
+				<div class="jsxc-contemt">
+					<ul>
+						<li><div><img src="img/s-1.png" /> </div><div>极色炫彩引擎</div> </li>
+						<li><div><img src="img/s-2.png" /> </div><div>人工智能语音</div></li>
+						<li><div><img src="img/s-3.png" /> </div><div>高色域>90%NTSC</div></li>
+						<li><div><img src="img/s-4.png" /> </div><div>支持HDR</div></li>
+						<li><div><img src="img/s-5.png" /> </div><div>Mstar6A938</div></li>
+						<li><div><img src="img/s-6.png" /> </div><div>A72架构四核</div></li>
+						<li><div><img src="img/s-7.png" /> </div><div>3GB大运存</div></li>
+					</ul>
+				</div>
+			</section>
+			
+			<section class="datu-1">
+				<div class="se1-con">
+					<h1>显示技术再进化 生态画质新体验</h1>
+					<p>
+				互联网生态时代，从屏幕中看到的真实影像是从源到端的每个环节紧密联结而协同呈现的。<br />
+超级电视不仅拥有传统彩电擅长的屏幕、背光系统、画质处理等终端显示画质技术，还擅长内容制作、压缩编码、云端存储、网络传输等技术，<br />
+以更好地还原导演艺术创作时的初衷。今天，我们再次带来多项创新画质技术，让超级电视迈入新里程碑。
+					
+					</p>
+				</div>
+				
+				
+			</section>
+			<section class="datu-2">
+				<div class="ship">
+					<video width="100%" height="100%" loop="loop" autoplay>
+						<source src="shiping/ship-1.mp4"> </source>
+					</video>
+				</div>
+				
+				<div class="se2-con">
+					<h1>极色炫彩，找回丢失的真实色彩</h1>
+					<p>
+网络视频内容在压缩和传输过程中，会损失大量颜色信息。超级电视通过自主研发的极色炫彩画质引擎，<br/>
+利用人眼对RGBCMY六色敏感的特性，通过提高图像色彩饱和度以及色彩亮度，修复视频压缩和解码过程所丢失的色彩，<br/>
+将真实画面的鲜艳还原回来并拥有更好的分层和颜色细节。碧海蓝天，红花绿地，和谐色彩之美尽收眼底
+					
+					</p>
+					<a href="##">
+						<div></div>
+						<span>点击查看完整视频</span>
+					</a>
+					
+				</div>
+				
+				
+			</section>
+			<section class="datu-3">
+				<div class="d3-content">
+					<div class="d3-text">
+						<h2>NTSC 90%高色域，展现意想不到的缤纷世界</h2>
+						<p>
+			色彩需要真实，更要丰富。超级电视采用的新R粉LED光源突破传统技术，实现NTSC 90%高色域；<br/>
+			极色炫彩技术与高色域屏幕的珠联璧合，让影像呈现自然之美。
+							
+						</p>
+					</div>
+					<div class="tv">
+						<video loop="loop" autoplay="autoplay" width="100%" height="100%">
+							<source src="shiping/colorVS.mp4" type="video/mp4"></source>
+							<img src="img/colorVs.jpg" style="display: block;" />
+						</video>
+					</div>
+				  
+				    <div class="hdr">
+				    	<h2>HDR高动态范围，还原真实明暗细节</h2>
+				    	<p>
+			HDR技术让影像在强光或黑暗中，显示更丰富的细节和层次。更丰富的灰阶，带来了相近色彩之间的微妙变化。<br/>
+			配合精心调校的屏幕，让超级电视呈现真实的光影世界。 		
+				    	</p>
+				    </div>
+				    <div class="tv-1">
+				    	<video loop="loop" autoplay="autoplay" width="1200px" height="100%" >
+				    		<source src="shiping/HDRVS.mp4" type="video/mp4"></source>
+				    		<img src="img/hd.jpg" />
+				    	</video>
+				    </div>
+					
+					
+				</div>
+				
+			</section>
+			<section class="datu-4">
+				<div class="c1">
+				<div class="d4-content">
+					<h2>全局动态背光处理算法2.0，画面亮度更均匀</h2>
+					<p>
+超级电视搭载星云背光系统，采用高精密丝印技术光学料件，拥有1.3倍行业密度的LED背光灯，通过9倍于行业标准的81点均匀性测试，<br/>
+大幅减少漏光现象。全局动态背光处理算法2.0：子像素级Max（R,G,B）处理算法，运算精度提升3倍，提升色明度，改善色彩效果；<br/>
+优化动态背光曲线，暗场亮度达到0.005nit，有效降低暗画面噪点和漏光；优化背光切换速度和平滑度，画面切换无闪烁。						
+						
+					</p>
+				</div>
+				
+				</div>
+			</section>
+			<section class="datu-5">
+				<div class="d5-content">
+					<h2>全新EUI6.0，更快、更直接</h2>
+					<p>
+搭载强运营的互联网化系统EUI 6.0-Greyhound，带来比以往更畅快的运行体验，<br/>
+更智能的语音助理，更便捷的在线服务。EUI6.0的全球化设计和React Native技术架构，让超级电视的性能得以充分发挥，<br/>
+让你享有一致且灵活的Open Eco服务体验，让超级电视不断变得更超级。<br/>
+（EUI6.0需后续升级实现）						
+					</p>
+					<a href="##">了解EUI6.0 >></a>
+				</div>
+			</section>		
+	        <section class="datu-6" >
+	        	<div class="d6-content">
+	        		<div class="d6-text">
+	        			<h2>超级语音，让操控更简单</h2>
+	        			<p>
+		自主研发结合机器学习让超级语音变成智能助理，帮你搜影片、查天气、找演员、播歌曲…，<br/>
+		甚至根据你的声音特质提供个性化服务。人工智能—超级语音，让更多人简单使用和享受超级电视。	        				
+	        			</p>
+	        		</div>
+	        		<div class="bg"></div>
+	        	</div>
+	        	
+	        </section>
+	        <section class="datu-7">
+	        	<div class="d7-content">
+	        		<div class="d7-text">
+	        			<h2>分众运营，与众不同</h2>
+	        			<p>
+超级电视坚持服务分众用户而非聚合不同内容。分众桌面智能筛选适合该类用户的对应内容，所见即可点播，并会依据观看习惯做更多个性化推荐。<br/>
+你可以根据需要来添加或关闭桌面，也可根据喜好调整桌面的排序，这与千篇一律的按内容类型聚合显示相比，是如此的与众不同。	        				
+	        			</p>
+	        				
+	        		</div>
+	        	    <div class="box">
+	        	    	<div class="box-tu">
+		        	    	<ul>
+		        	    		<li style="background:url(img/box-1.jpg);"></li>
+		        	    		<li style="background:url(img/box-2.jpg);"></li>
+		        	    		<li style="background:url(img/box-3.jpg);"></li>
+		        	    		<li style="background:url(img/box-4.jpg);"></li>
+		        	    		<li style="background:url(img/box-5.jpg);"></li>
+		        	    	</ul>
+	        	    	</div>
+	        	    	
+	        	    	<div class="box-dian">
+		        	    	<ul>
+		        	    		<li></li>
+		        	    		<li></li>
+		        	    		<li></li>
+		        	    		<li></li>
+		        	    		<li></li>
+		        	    	</ul>
+	        	    	</div>
+	        	    	
+	        	    	
+	        	    	
+	        	    </div>
+	        		
+	        		
+	        	</div>
+	        	
+	        </section>
+	
+	       		<footer>
+			<div class="f-top">
+				<ul class="f-bg">
+					<li><div></div><span>正品保障</span> </li>
+					<li><div></div><span>七天无理由退款</span></li>
+					<li><div></div><span>满150包邮</span></li>
+					<li><div></div><span>售后服务网点</span></li>
+				</ul>
+			</div>
+			<div class="f-bottom">
+				<div class="f-con">
+					<div>
+						<h4>生态品类</h4>
+						<a href="">超级电视</a>
+						<a href="">超级手机</a>
+						<a href="">智能硬件</a>
+						<a href="">娱乐周边</a>
+						<a href="">乐视会员</a>
+					</div>
+					<div>
+						<h4>生态服务</h4>
+						<a href="">生态头条</a>
+						<a href="">了迷社区</a>
+						<a href="">比一比</a>
+						<a href="">问一问</a>
+						<!--<a href="">乐视会员</a>-->
+					</div>
+					<div>
+						<h4>帮助中心</h4>
+						<a href="">新手入门</a>
+						<a href="">订单服务</a>
+						<a href="">物流服务</a>
+						<a href="">售后服务</a>
+						<a href="">安装报修</a>
+						<a href="">自助服务</a>
+						
+					</div>
+					<div>
+						<h4>服务支持</h4>
+						<a href="">线下体验厅</a>
+						<a href="">线下LePar店</a>
+						<a href="">售后服务网点</a>
+						<a href="">销售联盟</a>
+						<a href="">分享邀请</a>
+						<a href="">乐码通道</a>
+						
+					</div>
+					<div>
+						<h4>关于乐视商城</h4>
+						<a href="">公司介绍</a>
+						<a href="">联系我们</a>
+						<a href="">加入我们</a>
+						<a href="">关注我们</a>
+						<!--<a href="">乐视会员</a>-->
+					</div>
+					
+					<div class="zui">
+						<h2>1010-9000</h2>
+						<p>7*24小时客服电话</p>
+						<div>在线客服8:00-22:00</div>
+					</div>
+					
+					
+				</div>
+				
+		   <div class="footer_links">
+		   	<h4>友情链接</h4>
+		   	  <ul>
+		   	  	<li>乐视商城触屏版</li>
+		   	  	<li>乐视 </li>
+		   	  	<li>乐视tv</li>
+		   	  	<li>乐视手机 </li>
+		   	  	<li>乐视会员</li>
+		   	  	<li>乐视超级手机</li>
+		   	  	<li>乐2</li>
+		   	  	<li>乐2Pro</li>
+		   	  	<li>乐Max2</li>
+		   	  	<li>乐视云</li>
+		   	  	<li>车联网</li>
+		   	  	<li>乐视应用商店</li>
+		   	  	<li>播视网视频</li>
+		   	  	<li>温州视线</li>
+		   	  	<li>卡车之家</li>
+		   	  	<li>中国品牌网</li>
+		   	  	<li>百纳网</li>
+		   	  	<li>绿盟下载</li>
+		   	  	<li>寻购网</li>
+		   	  	<li>上海房产网</li>
+		   	  	<li>什么值得买</li>
+		   	  	<li>苹果手机助手</li>
+		   	  	<li>平板电脑</li>
+		   	  	<li>科学网</li>
+		   	  	<li>放心游商城</li>
+		   	  	<li>52PK游戏网</li>
+		   	  	<li>衣联网</li>
+		   	  	<li>万表网</li>
+		   	  	<li>新物种FF91</li>
+		   	  	<li>亿智蘑菇</li>
+		   	  </ul>
+		   	
+		   	
+		   </div>
+		   
+		   <div class="footer_down">
+		   <p>
+Copyright © 2004-2017 乐视电子商务(北京)
+有限公司 All rights reserved. 京ICP备16033412号-1
+网络文化经营许可证文网文[2009]221号
+		   </p>
+		   <div><img src="img/100 .jpg" /> </div>
+		   </div>
+          
+		</div>
+		   
+		
+		</footer>
+	
+	</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/television.css" />
+<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+<script type="text/javascript" src="js/lunbo.js" ></script>
+<script type="text/javascript" src="js/ajks.js" ></script>
+	   <script>
+	   	$(function(){
+	   		var uls=$(".xddw")
+	   		var lis=$(".xddw li")
+//	   		var gun=$("section");
+	   		lis.click(function(){
+	   			var index=$(this).index()
+	   			$("html,body").animate({scrollTop:$("section").height()*(index+1)},500);
+	   		  $(this).css("background","orange").siblings().css("background","#ebebeb")
+	   		  $(this).css("color","white").siblings().css("color","#333")
+	   		  
+	   		})
+	   		$(window).scroll(function(){
+	   			if($(this).scrollTop()>500){
+	   				uls.css({
+	   					"display":"block",
+	   					"top":"300px",
+	   					"left":"120px"
+	   				})
+//                 uls.animate({
+//                 	opacity: 1 ,
+//	   				top:"200px"
+//                 },2000)
+	   			}
+	   			if($(this).scrollTop()<500){
+	   				uls.css("display","none")
+	   				
+	   			}
+	   			
+	   		})
+	   		
+	   		
+	   		var a=$(".bg-tu img")
+            a.mouseover(function(){
+            	$(this).attr("src","img/shiping.png")
+            })
+	   		a.mouseout(function(){
+	   			$(this).attr("src","img/bofang.png")
+	   		})
+	   	})
+	   </script>
+	</head>
+	<body>
+		<ul class="xddw">
+			<li>精彩视频</li>
+			<li>影视会员</li>
+			<li>EUL电视</li>
+			<li>超级之处</li>
+		</ul>
+			<header>
+			<div class="yemei">
+				<div class="hr-a">
+					<div>
+					<a href="##">
+	<div  data-toggle="modal" data-target="#mod">登陆</div>
+					</a>
+					<a href="##">注册</a>
+					<a href="##">个人中心</a>
+					<a href="##">合作渠道</a>
+					<a href="##">帮主中心</a>
+					<a href="##">手机版</a>
+					</div>
+					
+				</div>	
+			</div>
+			<!--页眉结束-->
+			<nav>
+				<div></div>
+				<div class="sos">
+					<input type="text" id="inp" />
+					<input type="button" value="搜索" id="anniu" />
+				</div>
+				<ul id="data"></ul>
+				<div class="gwc">
+					<a href="##">
+					<span></span>
+					<span>购物车</span>
+					</a>
+				</div>
+				
+			</nav>
+			<!--导航栏结束-->
+			<div class="banner">
+					<ul class="top">
+						<li>乐视电视</li>
+						<li>乐视会员</li>
+						<li>以旧换新</li>
+						<li>乐迷社区</li>
+						<li>超级电视</li>
+					</ul>
+					
+					<!--轮播开始-->
+				<div class="lunbo">					
+					<ul class="fu">
+						<li><div style="background: url(img/lunbo1.jpg) no-repeat;"></div></li>
+						<li><div style="background: url(img/lunbo2.jpg) no-repeat;"></div></li>
+						<li><div style="background: url(img/lunbo3.jpg) no-repeat;"></div></li>
+						
+					</ul>
+					
+					
+				</div>
+				<!--轮播图结束-->
+				<div class="cbl">
+					<ul class="asid">
+						<li><a href="ftds.html"><span><i>分体电视 </i><b>&rsaquo;</b> </span></a></li>
+						<li><a href="ftds.html"><span><i>曲面电视 </i><b>&rsaquo;</b> </span></a></li>
+						<li><a href="ftds.html"><span><i>3D电视 </i><b>&rsaquo;</b> </span></a></li>
+						<li><a href="ftds.html"><span><i>4K高清电视 </i><b>&rsaquo;</b> </span></a></li>
+						<li><a href="ftds.html"><span><i>超薄电视 </i><b>&rsaquo;</b> </span></a></li>
+						<li><a href="ftds.html"><span><i>全面屏电视 </i><b>&rsaquo;</b> </span></a></li>
+						<li><a href="ftds.html"><span><i>量子点电视 </i><b>&rsaquo;</b> </span></a></li>
+					</ul>
+					
+					
+					<ul class="disn">
+						<li class="checked"></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="left"></div>
+					<div class="right"></div>
+					
+					
+				</div>
+				<!--侧边栏结束-->
+			</div>
+			
+			<div class="tuijian">
+				<div class="tuijian-left">
+					<ul>
+						<li>屏幕尺寸</li>
+						<li> <span>40吋</span> <span>43吋</span><span>50吋</span><span>55吋</span></li>
+						<li> <span>65吋</span><span>70吋</span><span>75吋</span><span>85吋</span></li>
+						<li><span>更多&rsaquo;</span></li>
+					</ul>
+					
+					
+				</div>
+				<div class="tuijian-right">
+					<ul>
+						<li><a href="ftds.html"><div class="right-l"> <p>超大4×40M</p><p>￥2099</p><div>查看详情</div></div><div class="right-r"><img src="img/tuijian1.png"/></div></a></li>
+						<li><a href="ftds.html"><div class="right-l"> <p>超大4×55M</p><p>￥4499</p><div>查看详情</div></div><div class="right-r"><img src="img/tuijian2.jpg"/></div></a></li>
+						<li><a href="ftds.html"><div class="right-l"> <p>超大4×55M</p><p>￥4379</p><div>查看详情</div></div><div class="right-r"><img src="img/tuijian3.jpg"/></div></a></li>
+						<li><a href="ftds.html"><div class="right-l"> <p>超大4×70M</p><p>￥12999</p><div>查看详情</div></div><div class="right-r"><img src="img/tuijian4.jpg"/></div></a></li>
+			
+						
+					</ul>
+				</div>
+				
+			</div>
+
+			</header>
+			
+		<main>
+			<section class="jincsp">
+				<h2>精彩视频</h2>
+			    <ul class="bg-tu">
+			    	<li><div><img src="img/bofang.png" /> </div> </li>
+			    	<li><div><img src="img/bofang.png" /> </div></li>
+			    	<li><div><img src="img/bofang.png" /> </div></li>
+			    </ul>
+			    <ul class="bg-tu">
+			    	<li><div><img src="img/bofang.png" /> </div> </li>
+			    	<li><div><img src="img/bofang.png" /> </div></li>
+			    	<li><div><img src="img/bofang.png" /> </div></li>
+			    </ul>
+			   </div>
+			</section>
+			
+			<section class="yshy">
+				<h2>影视会员</h2>
+			    <div><a href="ftds.html"></a></div>
+			</section>
+			
+			<section class="eul">
+				<h2>EUL</h2>
+				<a href="ftds.html">
+			    <div class="eul-top"><div></div><div></div>  </div>
+			    <div class="eul-bottom"><div></div><div></div><div></div> </div>
+			    </a>
+			</section>
+			
+			<section class="cjzc">
+				<h2>超级之处</h2>
+				<a href="ftds.html">
+			    <div class="cjzc-top"><div></div><div></div>  </div>
+			    <div class="cjzc-bottom"><div></div><div></div><div></div> </div>
+			    </a>
+			</section>
+			
+			<!--<section class="tvsd">
+				<h2>Tv应用商店</h2>
+				
+				
+			</section>-->
+			
+		</main>
+		<footer>
+			<div class="f-top">
+				<ul class="f-bg">
+					<li><div></div><span>正品保障</span> </li>
+					<li><div></div><span>七天无理由退款</span></li>
+					<li><div></div><span>满150包邮</span></li>
+					<li><div></div><span>售后服务网点</span></li>
+				</ul>
+			</div>
+			<div class="f-bottom">
+				<div class="f-con">
+					<div>
+						<h4>生态品类</h4>
+						<a href="">超级电视</a>
+						<a href="">超级手机</a>
+						<a href="">智能硬件</a>
+						<a href="">娱乐周边</a>
+						<a href="">乐视会员</a>
+					</div>
+					<div>
+						<h4>生态服务</h4>
+						<a href="">生态头条</a>
+						<a href="">了迷社区</a>
+						<a href="">比一比</a>
+						<a href="">问一问</a>
+						<!--<a href="">乐视会员</a>-->
+					</div>
+					<div>
+						<h4>帮助中心</h4>
+						<a href="">新手入门</a>
+						<a href="">订单服务</a>
+						<a href="">物流服务</a>
+						<a href="">售后服务</a>
+						<a href="">安装报修</a>
+						<a href="">自助服务</a>
+						
+					</div>
+					<div>
+						<h4>服务支持</h4>
+						<a href="">线下体验厅</a>
+						<a href="">线下LePar店</a>
+						<a href="">售后服务网点</a>
+						<a href="">销售联盟</a>
+						<a href="">分享邀请</a>
+						<a href="">乐码通道</a>
+						
+					</div>
+					<div>
+						<h4>关于乐视商城</h4>
+						<a href="">公司介绍</a>
+						<a href="">联系我们</a>
+						<a href="">加入我们</a>
+						<a href="">关注我们</a>
+						<!--<a href="">乐视会员</a>-->
+					</div>
+					
+					<div class="zui">
+						<h2>1010-9000</h2>
+						<p>7*24小时客服电话</p>
+						<div>在线客服8:00-22:00</div>
+					</div>
+					
+					
+				</div>
+				
+		   <div class="footer_links">
+		   	<h4>友情链接</h4>
+		   	  <ul>
+		   	  	<li>乐视商城触屏版</li>
+		   	  	<li>乐视 </li>
+		   	  	<li>乐视tv</li>
+		   	  	<li>乐视手机 </li>
+		   	  	<li>乐视会员</li>
+		   	  	<li>乐视超级手机</li>
+		   	  	<li>乐2</li>
+		   	  	<li>乐2Pro</li>
+		   	  	<li>乐Max2</li>
+		   	  	<li>乐视云</li>
+		   	  	<li>车联网</li>
+		   	  	<li>乐视应用商店</li>
+		   	  	<li>播视网视频</li>
+		   	  	<li>温州视线</li>
+		   	  	<li>卡车之家</li>
+		   	  	<li>中国品牌网</li>
+		   	  	<li>百纳网</li>
+		   	  	<li>绿盟下载</li>
+		   	  	<li>寻购网</li>
+		   	  	<li>上海房产网</li>
+		   	  	<li>什么值得买</li>
+		   	  	<li>苹果手机助手</li>
+		   	  	<li>平板电脑</li>
+		   	  	<li>科学网</li>
+		   	  	<li>放心游商城</li>
+		   	  	<li>52PK游戏网</li>
+		   	  	<li>衣联网</li>
+		   	  	<li>万表网</li>
+		   	  	<li>新物种FF91</li>
+		   	  	<li>亿智蘑菇</li>
+		   	  </ul>
+		   	
+		   	
+		   </div>
+		   
+		   <div class="footer_down">
+		   <p>
+Copyright © 2004-2017 乐视电子商务(北京)
+有限公司 All rights reserved. 京ICP备16033412号-1
+网络文化经营许可证文网文[2009]221号
+		   </p>
+		   <div><img src="img/100 .jpg" /> </div>
+		   </div>
+          
+		</div>
+		   
+		
+		</footer>
+		
+		
+	</body>
+	<!--<script type="text/javascript">
+			$('#mc').carousel({
+				interval:5000
+			})
+		</script>-->
+</html>

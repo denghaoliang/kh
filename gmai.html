@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/gmai.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="js/gmai.js" ></script>
+        <script type="text/javascript" src="js/china.js" ></script>
+        <script type="text/javascript" src="js/address.js" ></script>
+        
+        
+ <!--       <script>
+        	$(function(){
+//      	   console.log(obj.cityList)
+               var sheng=$("#sheng")
+               var chengshi=$("#chengshi")
+        	   var diqu=$("#diqu")
+        	   var tab=$(".tabs a")
+        	   sheng.on("click","li",function(){
+        	   	 var id=$(this).attr("id")
+        	   	$(this).parent().css("display","none")
+        	   	chengshi.css("display","block")
+        	   	diqu.css("display","none")
+        	  tab.eq(1).css({
+					"borderColor":"red",
+					"border-bottom":"solid #ffffff 1px"
+				  }).siblings("a").css({"borderColor":"#dbdbdb","borderBottom":"solid red 1px"})
+                 
+                 chengshi.children().remove()
+                 var cityList=obj.cityList
+               $.each(cityList, function(i,v) {
+               	var lis=$("<li></li>")
+               	   if(v[0]==id){
+               	   	  lis.html(v[1])
+               	   	  lis.attr("value",v[2])
+               	    chengshi.append(lis)
+               	   }
+               	  
+               })
+ 
+ 
+        	   })
+        	   
+        	  
+        	   
+        	   
+        	   chengshi.on("click","li",function(){
+        	   	 var value=$(this).attr("value")
+        	   	$(this).parent().css("display","none")
+        	   	sheng.css("display","none")
+        	   	diqu.css("display","block")
+        	  tab.eq(2).css({
+					"borderColor":"red",
+					"border-bottom":"solid #ffffff 1px"
+				  }).siblings("a").css({"borderColor":"#dbdbdb","borderBottom":"solid red 1px"})
+ 
+ 
+                   diqu.children().remove()
+                 var jtdiqu=obj.jtdiqu
+               $.each(jtdiqu, function(i,v) {
+               	    var lis=$("<li></li>")
+               	    if(value==v[0]){
+               	    lis.html(v[1])
+               	    diqu.append(lis)
+               	    }
+               	   
+               })
+ 
+ 
+ 
+        	   })
+        	   
+        	   
+        		
+        	})
+        </script>-->
+        
+	</head>
+	<body>
+		
+					<header>
+			<div class="yemei">
+				<div class="hr-a">
+					<div>
+					<a href="##">登陆</a>
+					<a href="##">注册</a>
+					<a href="##">个人中心</a>
+					<a href="##">合作渠道</a>
+					<a href="##">帮主中心</a>
+					<a href="##">手机版</a>
+					</div>
+					
+				</div>	
+			</div>
+			<!--页眉结束-->
+			<nav>
+				<div></div>
+				<div class="sos">
+					<input type="text" />
+					<input type="button" value="搜索" />
+				</div>
+				<div class="gwc">
+					<a href="##">
+					<span></span>
+					<span>购物车</span>
+					</a>
+				</div>
+				
+			</nav>
+			<!--导航栏结束-->
+			<div class="banner">
+					<ul class="top">
+						<li><a href="index.html">乐视电视</a></li>
+						<li>乐视会员</li>
+						<li>以旧换新</li>
+						<li>乐迷社区</li>
+						<li>超级电视</li>
+					</ul>
+				    <div class="gm">
+					  <div class="gm-com">
+					 <ul class="uptabSwitch">
+						<li><a href="#">首页</a><span>&rsaquo;</span></li>
+						<li><a href="#">超级电视</a><span>&rsaquo;</span> </li>
+						<li><a href="#">爆款电视</a><span>&rsaquo;</span> </li>
+						<li><a href="#">超4×40M</a><span>&rsaquo;</span> </li>
+						
+					</ul>
+			     	</div>
+		       
+		       <div class="fdj">
+					<p id="fangdajing">
+						<img src="img/放大镜.png" />
+					</p>
+		       	
+				<!--放大镜开始--> 
+				<div id="box" class="box">
+					<img src="img/超M4-1.jpg" />
+					<div id="mask" class="mask"></div>
+				</div>
+				<div id="big" class="big">
+					<img id="bigPic" src="img/超大M4-1.jpg"/>
+				</div>
+			<!--放大镜结束-->	
+			<div class="xiao-tb">
+				<div class="s-prev"></div>
+				<div class="fu-lun">
+					<ul class="x-lun">
+						<li style="background: url(img/小M4-1.jpg) no-repeat center 0;" class="on"></li>
+						<li style="background: url(img/小M4-2.jpg) no-repeat center 0;"></li>
+						<li style="background: url(img/小M4-3.jpg) no-repeat center 0;"></li>
+						<li style="background: url(img/小M4-4.jpg) no-repeat center 0;"></li>
+						<li style="background: url(img/小M4-5.jpg) no-repeat center 0;"></li>
+						<li style="background: url(img/小M4-1.jpg) no-repeat center 0;"></li>
+						<li style="background: url(img/小M4-2.jpg) no-repeat center 0;"></li>
+						<li style="background: url(img/小M4-3.jpg) no-repeat center 0;"></li>
+						<li style="background: url(img/小M4-4.jpg) no-repeat center 0;"></li>
+						<li style="background: url(img/小M4-5.jpg) no-repeat center 0;"></li>
+					</ul>
+				</div>
+				<div class="x-next"></div>
+			</div>	
+		 <!--放大镜左下角小图标结束-->
+		 <!--放大镜右边栏-->
+		 <aside class="y-bian">
+		 	<div>
+		 		<h1>超4 X40M（2年影视会员版）</h1>
+		 		<p class="cjhy"><span>超级影视会员买2年最高可得5年 硬件再降300元</span> <span>十一狂欢high翻天，最高直降400元>></span> </p>
+		 	    <p class="jg"><span>价格</span><span>￥4,379 起</span></p>
+		 	    <div class="peisq">
+		 	    	<div class="peisq-1">配送地区</div><div class="didian"> <span class="proa">北京</span> &nbsp; <span class="cita">北京市</span>&nbsp; <span class="adda">朝阳区 </span>&nbsp;<span class="sj"></span></div>
+		 	        <div class="cshi">
+		 	        	<div>
+		 	        		<div class="tabs"> <a class="pro">北京</a><a class="cit">北京市</a><a class="add">朝阳区</a><span></span> </div>
+                            <div class="c-content">
+                            	<ul id="province">
+                            		<li id="000" title="北京">北京</li>
+                            		<li id="001">广东省</li>
+                            		<li id="002">上海</li>
+                            		<li id="003">天津</li>
+                            		<li id="004">重庆</li>
+                            		<li id="005">河北省</li>
+                            		<li id="006">山西省</li>
+                            		<li id="007">内蒙古自治区</li>
+                            		<li id="008">辽宁省</li>
+                            		<li id="009">吉林省</li>
+                            		<li id="010">黑龙江省</li>
+                            		<li id="011">江苏省</li>
+                            		<li id="012">浙江省</li>
+                            		<li id="013">安徽省</li>
+                            		<li id="014">福建省</li>
+                            		<li id="015">江西省</li>
+                            		<li id="016">山东省</li>
+                            		<li id="017">河南省</li>
+                            		<li id="018">湖北省</li>
+                            		<li id="019">湖南省</li>
+                            		<li id="020">广西壮族自治区</li>
+                            		<li id="021">海南省</li>
+                            		<li id="022">四川省</li>
+                            		<li id="023">贵州省</li>
+                            		<li id="024">云南省</li>
+                            		<li id="025">西藏自治区</li>
+                            		<li id="026">陕西省</li>
+                            		<li id="027">甘肃省</li>
+                            		<li id="028">青海省</li>
+                            		<li id="029">宁夏回族自治区</li>
+                            		<li id="030">新疆维吾尔自治区</li>
+                            		<li id="031">台湾</li>
+                            		<li id="032">香港</li>
+                            		<li id="033">澳门</li>
+                            	</ul>
+                            	<ul id="city">
+                            		<li value="0000" id="000" >北京市</li>
+                            	</ul>
+                            	<ul id="address">
+                            		<li>东城区</li>
+                            		<li>西城区</li>
+                            		<li>朝阳区</li>
+                            		<li>丰台区</li>
+                            		<li>石景山区</li>
+                            		<li>海定区</li>
+                            		<li>门头沟区</li>
+                            		<li>房山区</li>
+                            		<li>通州区</li>
+                            		<li>顺义区</li>
+                            		<li>昌平区</li>
+                            		<li>大兴区</li>
+                            		<li>怀柔区</li>
+                            		<li>平台区</li>
+                            		<li>密云县</li>
+                            		<li>延庆县</li>
+                            	</ul>
+                            </div> 		 	        	
+		 	        	</div>
+		 	        </div> 
+		 	    </div>
+		 	    <p class="yus"><span>预售</span><span>24:00前完成支付，预计（2017.11.10）之前发货</span></p>
+		 	    <div class="xinghao"><p>型号</p><p>超4×55M</p> </div>
+		 	    <div class="chicun"><p>尺寸</p><p>55吋</p> </div>
+		 	    <div class="hyfw"><p>会员服务</p><p>超级影视会员（2年会员） x 1 980元</p><p>放弃体育会员 x 1 0元</p> </div>
+		 	    <div class="fk"> <span>付款方式</span> <p class="fk-1"><span>乐乐花分期</span><span> 约￥393.37 X 12期</span></p> <p class="fk-2"><span> 蚂蚁花呗分期</span><span> ￥394.1 X 12期</span></p> </div>
+		 	    <div class="jrgwc"><span>总计：</span><span>￥4379.00</span><a href="##">加入购物车</a> </div>
+		 	</div>
+		 </aside>
+		 
+		 
+		 </div>
+		 
+		 
+		 
+		 
+				</div>	
+			</div>
+			</header>
+		  <main>
+		  	<div class="spjs">
+		  		<ul>
+		  		<li>商品介绍</li> 
+				<li>参数规格</li> 
+				<li>评价晒单</li> 
+				<li>售后服务</li> 
+				<li>帮助中心</li> 	
+		  		</ul>
+		  	</div>
+		  	<div class="sgj"></div>
+		  	<div class="mkd"></div>
+		  	<div class="rgzn"></div>
+		  	<div class="gq"></div>
+		  	<div class="zssc" ></div>
+		  	<div class="hdr1" ></div>
+		  	<div class="qjdt" ></div>
+		  	<div class="zchz" ></div>
+		  	<div class="aqe" ></div>
+		  	<div class="neichun" ></div>
+		  	<div class="jgsm">
+		  		<p>价格说明</p>
+		  		<p>划线价格：为商品专柜吊牌价格或正品零售指导价格或商品历史展示价格等，仅供您参考。</p>
+		  		<p>未划线价格：为乐视商城商品或服务现时销售价格，该价格可能会因会员资格、积分兑换、优惠政策等情形发生变化，请您以订单结算价格为准。</p>
+		  		
+		  	</div>
+		  	
+		  	
+		  	
+		  </main>
+		  	
+		  	<footer>
+			<div class="f-top">
+				<ul class="f-bg">
+					<li><div></div><span>正品保障</span> </li>
+					<li><div></div><span>七天无理由退款</span></li>
+					<li><div></div><span>满150包邮</span></li>
+					<li><div></div><span>售后服务网点</span></li>
+				</ul>
+			</div>
+			<div class="f-bottom">
+				<div class="f-con">
+					<div>
+						<h4>生态品类</h4>
+						<a href="">超级电视</a>
+						<a href="">超级手机</a>
+						<a href="">智能硬件</a>
+						<a href="">娱乐周边</a>
+						<a href="">乐视会员</a>
+					</div>
+					<div>
+						<h4>生态服务</h4>
+						<a href="">生态头条</a>
+						<a href="">了迷社区</a>
+						<a href="">比一比</a>
+						<a href="">问一问</a>
+						<!--<a href="">乐视会员</a>-->
+					</div>
+					<div>
+						<h4>帮助中心</h4>
+						<a href="">新手入门</a>
+						<a href="">订单服务</a>
+						<a href="">物流服务</a>
+						<a href="">售后服务</a>
+						<a href="">安装报修</a>
+						<a href="">自助服务</a>
+						
+					</div>
+					<div>
+						<h4>服务支持</h4>
+						<a href="">线下体验厅</a>
+						<a href="">线下LePar店</a>
+						<a href="">售后服务网点</a>
+						<a href="">销售联盟</a>
+						<a href="">分享邀请</a>
+						<a href="">乐码通道</a>
+						
+					</div>
+					<div>
+						<h4>关于乐视商城</h4>
+						<a href="">公司介绍</a>
+						<a href="">联系我们</a>
+						<a href="">加入我们</a>
+						<a href="">关注我们</a>
+						<!--<a href="">乐视会员</a>-->
+					</div>
+					
+					<div class="zui">
+						<h2>1010-9000</h2>
+						<p>7*24小时客服电话</p>
+						<div>在线客服8:00-22:00</div>
+					</div>
+					
+					
+				</div>
+				
+		   <div class="footer_links">
+		   	<h4>友情链接</h4>
+		   	  <ul>
+		   	  	<li>乐视商城触屏版</li>
+		   	  	<li>乐视 </li>
+		   	  	<li>乐视tv</li>
+		   	  	<li>乐视手机 </li>
+		   	  	<li>乐视会员</li>
+		   	  	<li>乐视超级手机</li>
+		   	  	<li>乐2</li>
+		   	  	<li>乐2Pro</li>
+		   	  	<li>乐Max2</li>
+		   	  	<li>乐视云</li>
+		   	  	<li>车联网</li>
+		   	  	<li>乐视应用商店</li>
+		   	  	<li>播视网视频</li>
+		   	  	<li>温州视线</li>
+		   	  	<li>卡车之家</li>
+		   	  	<li>中国品牌网</li>
+		   	  	<li>百纳网</li>
+		   	  	<li>绿盟下载</li>
+		   	  	<li>寻购网</li>
+		   	  	<li>上海房产网</li>
+		   	  	<li>什么值得买</li>
+		   	  	<li>苹果手机助手</li>
+		   	  	<li>平板电脑</li>
+		   	  	<li>科学网</li>
+		   	  	<li>放心游商城</li>
+		   	  	<li>52PK游戏网</li>
+		   	  	<li>衣联网</li>
+		   	  	<li>万表网</li>
+		   	  	<li>新物种FF91</li>
+		   	  	<li>亿智蘑菇</li>
+		   	  </ul>
+		   	
+		   	
+		   </div>
+		   
+		   <div class="footer_down">
+		   <p>
+Copyright © 2004-2017 乐视电子商务(北京)
+有限公司 All rights reserved. 京ICP备16033412号-1
+网络文化经营许可证文网文[2009]221号
+		   </p>
+		   <div><img src="img/100 .jpg" /> </div>
+		   </div>
+          
+		</div>
+		   
+		
+		</footer>
+		  
+		  
+		  
+	</body>
+</html>
